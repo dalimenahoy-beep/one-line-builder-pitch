@@ -5,8 +5,13 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname } from "node:path";
 
-const LINE =
-  "Put up one prize, and a swarm of AI agents will race to build your idea overnight — you pay only for the winner.";
+// The pitch is built from two named parts joined in code:
+// HOOK states the offer, PAYOFF states why it costs the builder nothing extra.
+const HOOK =
+  "Put up one prize, and a swarm of AI agents will race to build your idea overnight";
+const PAYOFF = "you pay only for the winner.";
+
+const LINE = `${HOOK} — ${PAYOFF}`;
 
 const OUT = "/output/entry.txt";
 
